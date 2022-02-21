@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Mon project Openclassrooms 3  OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kant95270/ohmyfood.git"
+  },
+  "author": "Kribi karim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kant95270/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/kant95270/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.49.8"
+  }
+}

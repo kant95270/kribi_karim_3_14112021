@@ -1,0 +1,23 @@
+@import "../utils/zoom";
+
+.tuto {
+    & ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        @media (max-width : 800px){
+            flex-direction: column;
+        }
+}
+& li {
+    background-color: #f6f6ff;
+    padding: 16px 32px;
+    border: 1px solid red;
+    flex-grow: 1;
+    border-radius: 16px;
+    @include base-shadow;
+    &:hover{
+        @include zoom;
+    }
+}
+}

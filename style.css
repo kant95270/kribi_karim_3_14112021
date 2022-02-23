@@ -64,26 +64,48 @@ header {
   opacity: 0.9;
 }
 
+.tuto {
+  counter-reset: steps;
+}
 .tuto ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: 32px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .tuto ol {
     flex-direction: column;
   }
 }
 .tuto li {
+  position: relative;
+  list-style-type: none;
   background-color: #f6f6ff;
-  padding: 16px 32px;
-  border: 1px solid red;
+  padding: 24px 32px;
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 16px -3px #000000;
 }
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 16px;
+  left: -16px;
+}
 .tuto li:hover {
   transform: scale(1.02);
+}
+.tuto li i.fas {
+  margin-right: 16px;
+  color: #7e7e7e;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -170,16 +170,22 @@ header {
 .menus .card_image-4 {
   background-image: url("../../assets/menu-4.jpg");
 }
-.menus .card_description position:relative h3,
+.menus .card_description {
+  position:relative ;
+}  
+.menus .card_description h3,
 .menus .card_description p {
   margin: 8px;
+}
+.menus .card_description p {
+  padding-top: 8px;
 }
 .menus .card_description i {
   font-size: 32px;
   position: absolute;
   right: 16px;
-  top: 95%;
-  transform: translateY(-60%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */

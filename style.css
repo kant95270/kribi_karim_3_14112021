@@ -12,7 +12,22 @@ body {
 }
 
 main {
-  padding: 0 16px;
+  padding: 0 122px;
+}
+
+h2 {
+  padding: 32px 0;
+  margin: 0;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -41,7 +56,6 @@ header {
   text-align: center;
 }
 .explorer h2 {
-  margin-top: 32px;
   font-size: 32px;
 }
 .explorer p {
@@ -96,8 +110,9 @@ header {
   place-items: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 16px;
+  top: 30%;
   left: -16px;
+  transform: translate(0%);
 }
 .tuto li:hover {
   transform: scale(1.02);
@@ -106,6 +121,65 @@ header {
   margin-right: 16px;
   color: #7e7e7e;
   font-size: 24px;
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus .menus_cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+}
+@media (max-width: 1000px) {
+  .menus .menus_cards {
+    grid-template-columns: repeat(2, 1fr);
+    background-size: cover;
+  }
+}
+.menus .menus_cards .new {
+  position: relative;
+}
+.menus .menus_cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 32px;
+  width: 80px;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 16px;
+  top: 16px;
+}
+.menus .card_image {
+  background-image: url("../../assets/menu-1.jpg");
+  height: 240px;
+  border-radius: 16px 16px 0 0;
+  background-size: cover;
+}
+.menus .card_image-1 {
+  background-image: url("../../assets/menu-1.jpg");
+}
+.menus .card_image-2 {
+  background-image: url("../../assets/menu-2.jpg");
+}
+.menus .card_image-3 {
+  background-image: url("../../assets/menu-3.jpg");
+}
+.menus .card_image-4 {
+  background-image: url("../../assets/menu-4.jpg");
+}
+.menus .card_description position:relative h3,
+.menus .card_description p {
+  margin: 8px;
+}
+.menus .card_description i {
+  font-size: 32px;
+  position: absolute;
+  right: 16px;
+  top: 95%;
+  transform: translateY(-60%);
 }
 
 /*# sourceMappingURL=style.css.map */

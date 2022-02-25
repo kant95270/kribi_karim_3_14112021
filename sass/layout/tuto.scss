@@ -26,8 +26,9 @@
         place-items: center;
         border-radius: 50%;
         position: absolute;
-        bottom: $tuto-bullet-height;
-        left: -$tuto-bullet-height;
+        top: 30%;
+        left: -1*$tuto-bullet-height;
+        transform: translate(-0%);
     }
     list-style-type: none;
     background-color: #f6f6ff;

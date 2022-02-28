@@ -1,9 +1,10 @@
 @import "../utils/variables.scss";
 @import "../utils/colors.scss";
+@import "../utils/mixins.scss";
 
 .menus {
     background-color: #f6f6f6;
-   
+    margin-bottom: 32px;
 
     .menus_cards {
         display: grid;
@@ -29,7 +30,6 @@
         top: 16px;
     }
 }
-
     .card {
         &_image {
             background-image: url("../../assets/menu-1.jpg");
@@ -44,21 +44,25 @@
             }    
         }
         &_description {
-            position:relative
-            h3,
-            p {
-                margin: 8px;
+            position:relative;
+            background-color: white;
+            border-radius: 0 0 16px 16px;
+            &::before {
+                @include heart;
             }
+            &::after {
+                @include heart ($opacity: 0 ,$font-weight: 900,
+                $color: transparent);
+                @include gradient(1);
+            }
+            &:hover::after {
+                opacity: 1;
+                transform: translateY(-50%) scale(1.1);
+            }
+            h3
             p{
-                padding-top: 8px;
-            }
-            i {
-                font-size: 32px;
-                position: absolute;
-                right: 16px;
-                top: 95%;
-                transform: translateY(-60%);
-            }
+                padding: 4.8px;
+            }                    
         }
     }
-}
+    }

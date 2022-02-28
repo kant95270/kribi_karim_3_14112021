@@ -1,5 +1,4 @@
-@import "../utils/box-shadow";
-@import "../utils/zoom";
+@import "../utils/mixins";
 @import "../utils/variables";
 @import "../utils/colors.scss";
 
@@ -27,7 +26,7 @@
         border-radius: 50%;
         position: absolute;
         top: 30%;
-        left: -1*$tuto-bullet-height;
+        left: -1 *$tuto-bullet-height;
         transform: translate(-0%);
     }
     list-style-type: none;

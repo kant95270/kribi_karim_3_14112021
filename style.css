@@ -14,6 +14,11 @@ body {
 main {
   padding: 0 122px;
 }
+@media (max-width: 1000px) {
+  main {
+    padding: 0 16px;
+  }
+}
 
 h2 {
   padding: 32px 0;
@@ -68,10 +73,10 @@ header {
   padding: 16px 32px;
   border: none;
   border-radius: 32px;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
   margin-top: 16px;
   box-shadow: 2px 1px 16px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -125,6 +130,7 @@ header {
 
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 32px;
 }
 .menus .menus_cards {
   display: grid;
@@ -171,21 +177,71 @@ header {
   background-image: url("../../assets/menu-4.jpg");
 }
 .menus .card_description {
-  position:relative ;
-}  
-.menus .card_description h3,
-.menus .card_description p {
-  margin: 8px;
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 16px 16px;
 }
-.menus .card_description p {
-  padding-top: 8px;
-}
-.menus .card_description i {
+.menus .card_description::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font awesome 5 free";
+  font-weight: 400;
+  content: "\f004";
   font-size: 32px;
   position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.menus .card_description::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 32px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+}
+.menus .card_description:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+.menus .card_description h3 p {
+  padding: 4.8px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 16px 32px;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", "sans-serif";
+  font-weight: 500;
+  padding: 16px 0;
+}
+footer p {
+  padding: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

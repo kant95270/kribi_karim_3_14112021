@@ -2,17 +2,18 @@
 @import "../utils/colors.scss";
 @import "../utils/mixins.scss";
 
-.menus {
+#homepage {
+  .menus {
     background-color: #f6f6f6;
     margin-bottom: 32px;
 
     .menus_cards {
         display: grid;
-        grid-template-columns: repeat(1 ,1fr);
+        grid-template-columns: repeat(2 ,1fr);
         gap: 32px;
         @media (max-width: $breakpoint) {
-        grid-template-columns: repeat(2, 1fr);
-        background-size: cover;
+        grid-template-columns: repeat(1, 1fr);
+    
     }
     .new {
         position: relative;
@@ -47,9 +48,9 @@
             @include heart-animated;
             }
             h3
-            p{
-                padding: 4.8px;
-            }                    
-        }
-    }
-    
+            p {
+                 padding: 4.8px;
+           }                    
+       }
+    }  
+ }   

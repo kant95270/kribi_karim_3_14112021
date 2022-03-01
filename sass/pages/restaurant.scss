@@ -1,7 +1,13 @@
 @import "../utils/mixins.scss";
 @import "../utils/variables.scss";
+@import "../utils/colors.scss";
 
-.banner img {
+body{
+    background-color: $lightergrey;
+}    
+
+#page-resto {
+  .banner img {
     display: block;
     max-width: 100%;
     height: 70vh;
@@ -9,30 +15,53 @@
     object-position: center bottom;
 }
 
-.resto_title {
+  .resto_title {
     margin-top: -32px;
-h2 {
+ h2 {
     font-family: "shrikhand","sans serif";
     padding: 32px 16px;
    @include heart-animated;
    border-radius: 32px 32px 0 0;
+   background-color: $lightergrey;
+   
 }
 }
-
-.menus-grid {
-    background: yellow;
+.resto-main {
+    padding: 0 16px;    
+}
+.menus {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     @media (max-width:$breakpoint) {
-        grid-template-columns: 1fr;
-    }
-    & > * {
-        border: 1px solid red;
-    }
+        grid-template-columns: 1fr;  
+}
+.menus_category {
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 16px;
+    .menu-item {
+        display: flex;
+        padding: 16px;        
+        .menu-item_price {
+            margin-left: auto;
+            font-weight: 900;
+            padding: 16px;
+            display: flex; 
+            align-items: flex-end;   
+        }
+        .menu-item_description {
+            padding: 16px;
+        }
+        .menu-item_check {
+            background-color: $color-tertiary;
+        }
+        & > * {
+            border: 1px solid;
+        }
+    }    
+}
+}
 }
 
-.resto-main {
-    padding: 0 16px;
-}
 

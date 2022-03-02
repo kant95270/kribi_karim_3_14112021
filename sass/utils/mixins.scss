@@ -5,7 +5,7 @@
     rgba(255, 121, 218, $opacity)
     );   
 }
-@mixin base-shadow {
+@mixin box-shadow {
     box-shadow: 2px 1px 16px -3px #000000;
     
 }

@@ -34,7 +34,7 @@
     padding: 24px 32px;
     flex-grow: 1;
     border-radius: 16px;
-    @include base-shadow;
+    @include box-shadow;
     &:hover{
         @include zoom;
     }

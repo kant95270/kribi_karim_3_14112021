@@ -37,20 +37,33 @@ body{
     @media (max-width:$breakpoint) {
         grid-template-columns: 1fr;  
 }
-.menus_category {
-    background-color: white;
+h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+    &::after {
+      content:"";
+      position: absolute;
+      top :24px;
+      left: 0px;
+      height: 4px;
+      width: 48px;
+      background-color:$color-tertiary;
+    }
+}
+.menus_category {    
     overflow: hidden;
     .menu-item {
         display: flex;
-        overflow: hidden;
+        background-color: white;
         border-radius: 16px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 16px;
         @include box-shadow;        
         .menu-item_price {
             margin-left: auto;
             font-weight: 900;
-            padding: 16px;
+            padding: 8px;
             display: flex; 
             align-items: flex-end;   
         }

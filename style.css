@@ -75,7 +75,7 @@ header {
   border-radius: 32px;
   transition: transform 200ms;
   margin-top: 16px;
-  box-shadow: 2px 1px 16px -3px #000000;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
@@ -102,7 +102,7 @@ header {
   padding: 24px 32px;
   flex-grow: 1;
   border-radius: 16px;
-  box-shadow: 2px 1px 16px -3px #000000;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
 .tuto li::before {
   content: counter(steps);
@@ -324,22 +324,35 @@ body {
     grid-template-columns: 1fr;
   }
 }
+#page-resto .menus h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+#page-resto .menus h3::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0px;
+  height: 4px;
+  width: 48px;
+  background-color: #99e2d0;
+}
 #page-resto .menus .menus_category {
-  background-color: white;
   overflow: hidden;
 }
 #page-resto .menus .menus_category .menu-item {
   display: flex;
-  overflow: hidden;
+  background-color: white;
   border-radius: 16px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  box-shadow: 2px 1px 16px -3px #000000;
+  overflow: hidden;
+  margin: 16px;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
 #page-resto .menus .menus_category .menu-item .menu-item_price {
   margin-left: auto;
   font-weight: 900;
-  padding: 16px;
+  padding: 8px;
   display: flex;
   align-items: flex-end;
 }

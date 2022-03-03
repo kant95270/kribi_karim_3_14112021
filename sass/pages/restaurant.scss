@@ -6,8 +6,24 @@
 body{
     background-color: $lightergrey;
 }    
-
 #page-resto {
+    header {
+        &::before {
+            transition: transform 200ms;
+        }
+        &:hover::before {
+            @include zoom ($zoom-level:1.2,$transformation: translateY(-50%));
+        }
+    &::before {
+        @include font-awesome($font-weight:900);
+        content: "\f060";
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }       
+    }
+
   .banner img {
     display: block;
     max-width: 100%;
@@ -15,7 +31,6 @@ body{
     object-fit: cover;
     object-position: center bottom;
 }
-
   .resto_title {
     margin-top: -32px;
  h2 {
@@ -23,8 +38,7 @@ body{
     padding: 32px 16px;
    @include heart-animated;
    border-radius: 32px 32px 0 0;
-   background-color: $lightergrey;
-   
+   background-color: $lightergrey; 
 }
 }
 .resto-main {
@@ -111,6 +125,15 @@ h3 {
     }    
 }
 }
+}
+
+section.order {
+    height: 30vh;
+    display: grid;
+    place-items: center;
+    button {
+        @include base-button;
+    }
 }
 }
 

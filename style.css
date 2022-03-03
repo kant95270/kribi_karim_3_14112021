@@ -75,6 +75,7 @@ header {
   border-radius: 32px;
   transition: transform 200ms;
   margin-top: 16px;
+  cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
@@ -120,7 +121,7 @@ header {
   transform: translate(0%);
 }
 .tuto li:hover {
-  transform: scale(1.02);
+  transform: none scale(1.02);
 }
 .tuto li i.fas {
   margin-right: 16px;
@@ -182,15 +183,15 @@ header {
 }
 #homepage .menus .card_description::before {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "font awesome 5 free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
   font-size: 32px;
-  position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
@@ -202,15 +203,15 @@ header {
 }
 #homepage .menus .card_description::after {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "font awesome 5 free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f004";
   font-size: 32px;
-  position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
@@ -247,6 +248,27 @@ body {
   background-color: #f6f6f6;
 }
 
+#page-resto header::before {
+  transition: transform 200ms;
+}
+#page-resto header:hover::before {
+  transform: translateY(-50%) scale(1.2);
+}
+#page-resto header::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
 #page-resto .banner img {
   display: block;
   max-width: 100%;
@@ -268,15 +290,15 @@ body {
 }
 #page-resto .resto_title h2::before {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "font awesome 5 free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
   font-size: 32px;
-  position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
@@ -288,15 +310,15 @@ body {
 }
 #page-resto .resto_title h2::after {
   display: inline-block;
+  position: absolute;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "font awesome 5 free";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f004";
   font-size: 32px;
-  position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
@@ -398,6 +420,28 @@ body {
   100% {
     transform: rotate(0);
   }
+}
+#page-resto section.order {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+#page-resto section.order button {
+  color: white;
+  font-weight: 300;
+  font-size: 24px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 32px;
+  transition: transform 200ms;
+  margin-top: 16px;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+#page-resto section.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 @import "../utils/mixins";
+@import "../utils/colors.scss";
 
 .explorer {
     text-align: center;
@@ -12,4 +13,41 @@
 & button {
     @include base-button;
 }
+}
+
+.loader {
+    $animation-duration :3s;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    height: 100vh;
+    inset:0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 200ms  $animation-duration forwards;
+    transform-origin: top;
+    &::after {
+        content: "";
+        height: 100px;
+        width: 100px;
+        border-right: 5px solid transparent;
+        border-top: 5px solid $purple;
+        border-radius: 50%;
+        animation :spin $animation-duration;
+    }
+}
+
+@keyframes disappear {
+    to {
+        transform: scale(0);
+    }
+
+    }
+
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }   
 }

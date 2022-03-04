@@ -8,12 +8,9 @@ body{
 }    
 #page-resto {
     header {
-        &::before {
-            transition: transform 200ms;
-        }
         &:hover::before {
             @include zoom ($zoom-level:1.2,$transformation: translateY(-50%));
-        }
+   }
     &::before {
         @include font-awesome($font-weight:900);
         content: "\f060";
@@ -21,8 +18,10 @@ body{
         top: 50%;
         transform: translateY(-50%);
         font-size: 20px;
+        transition: transform 200ms;
     }       
-    }
+}
+
 
   .banner img {
     display: block;
@@ -55,6 +54,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 400;
     position: relative;
+    margin-bottom: 16px;
     &::after {
       content:"";
       position: absolute;
@@ -67,13 +67,28 @@ h3 {
 }
 .menus_category {    
     overflow: hidden;
+
+    @for $i from 1 through  3 {  
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+        }   
+    }
+
     .menu-item {
+        $numberOfItems: 3;
+        @for $i from 1 through  $numberOfItems {  
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms * $i;
+            }   
+        }
         display: flex;
         background-color: white;
         border-radius: 16px;
         overflow: hidden;
-        margin: 16px;
-        @include box-shadow;        
+        margin: 8px;
+        @include box-shadow;
+        animation: appear 1s;
+        animation-fill-mode: both;       
         .menu-item_price {
             margin-left: auto;
             font-weight: 900;

@@ -11,7 +11,7 @@
     box-shadow: 2px 1px 8px -3px $lightgrey;
     
 }
-@mixin zoom ($zoom-level:1.02, $transformation:none) {
+@mixin zoom ($zoom-level:1.02, $transformation:null) {
     transform: $transformation scale($zoom-level); 
 }
 

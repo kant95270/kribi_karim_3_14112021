@@ -159,7 +159,7 @@ header {
   transform: translate(0%);
 }
 .tuto li:hover {
-  transform: none scale(1.02);
+  transform: scale(1.02);
 }
 .tuto li i.fas {
   margin-right: 16px;
@@ -469,8 +469,8 @@ body {
   display: grid;
   place-items: center;
   background-color: white;
-  aspect-ratio: 1;
-  width: 32px;
+  height: 16px;
+  width: 16px;
   border-radius: 16px;
   color: #99e2d0;
 }

@@ -56,12 +56,17 @@ header {
 .city i {
   font-size: 24px;
 }
+.city h2 {
+  font-size: 16px;
+}
 
 .explorer {
   text-align: center;
+  margin: 32px;
 }
 .explorer h2 {
-  font-size: 32px;
+  font-size: 24px;
+  margin: 16px;
 }
 .explorer p {
   font-size: 16px;
@@ -78,6 +83,7 @@ header {
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 16px;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -93,7 +99,7 @@ header {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 200ms 3s forwards;
+  animation: disappear 200ms 1s forwards;
   transform-origin: top;
 }
 .loader::after {
@@ -103,7 +109,7 @@ header {
   border-right: 5px solid transparent;
   border-top: 5px solid #9356dc;
   border-radius: 50%;
-  animation: spin 3s;
+  animation: spin 1s;
 }
 
 @keyframes disappear {

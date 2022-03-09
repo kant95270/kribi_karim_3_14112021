@@ -427,6 +427,7 @@ body {
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   animation: appear 1s;
   animation-fill-mode: both;
+  cursor: pointer;
 }
 #page-resto .menus .menus_category .menu-item:nth-child(1) {
   animation-delay: 100ms;

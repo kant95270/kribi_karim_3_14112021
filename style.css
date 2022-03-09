@@ -197,7 +197,7 @@ header {
   top: 16px;
 }
 #homepage .menus .card_image {
-  background-image: url("../../assets/menu-1.jpg");
+  background-image: url("assets/menu-1.jpg");
   height: 240px;
   border-radius: 16px 16px 0 0;
   background-size: cover;

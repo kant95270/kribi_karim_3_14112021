@@ -330,6 +330,7 @@ footer p {
   object-position: center bottom;
 }
 #page-resto .resto_title {
+  position: relative;
   margin-top: -32px;
 }
 #page-resto .resto_title h2 {
